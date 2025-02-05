@@ -64,7 +64,7 @@ def main():
         st.session_state["spin_disabled"] = False  # disable button immediately after click
         result = spin_wheel()
         if result.lower() == "nothing, you lose":
-            st.warning("Oh no! You lose'. Luck is on your side we'll allow another spin, try again!")
+            st.warning("Oh no! You lose. Since it's a special occasion, we'll allow another spin. Try again!")
             st.session_state["spin_disabled"] = True  # re-enable button for another try
         else:
             st.success(f"Congratulations! You won: {result}")

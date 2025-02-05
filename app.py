@@ -60,6 +60,7 @@ def main():
     st.markdown("<hr>", unsafe_allow_html=True)
 
     # Button to trigger the prize wheel spin; disabled if already clicked
+    st.warning("Disclaimer: You may be liable for accepting a gift as specified by the spin result.  Spin at your own risk!")
     if st.button("Spin the Wheel!", disabled=st.session_state["spin_disabled"]):
         st.session_state["spin_disabled"] = False  # disable button immediately after click
         result = spin_wheel()
